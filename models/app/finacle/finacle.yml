@@ -1,0 +1,45 @@
+sources:
+  - name: finacle
+    database: snowflake_sample_data
+    schema: {{ env_var("DBT_SCHEMA") }}
+    loader: qlik # informational only (free text)
+
+    config:
+      # changed to config in v1.10
+      # loaded_at_field: _loaded_at # configure for all sources
+      # meta fields are rendered in auto-generated documentation
+      meta: # changed to config in v1.10
+        contains_pii: true
+
+      # Add tags to this source
+      tags: # changed to config in v1.10
+        - ecom
+        - pii
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+
+    tables:
+      - name: orders
+        # identifier: Orders_
+        config:
+          # changed to config in v1.10
+          # loaded_at_field: updated_at # override source defaults
+        columns:
+          - name: o_orderkey
+            data_tests:
+              - unique
+
+          - name: o_totalprice
+            data_tests:
+              - not_null
+
+      - name: customers
+        quoting:
+          identifier: true # override source defaults
+        columns:
+          - name: c_custkey
+            data_tests:
+              - unique
