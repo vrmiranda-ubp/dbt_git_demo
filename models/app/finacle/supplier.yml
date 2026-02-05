@@ -1,0 +1,31 @@
+models:
+  - name: supplier
+    description: ""
+    columns:
+      - name: s_suppkey
+        data_type: number
+        description: ""
+
+      - name: s_name
+        data_type: varchar
+        description: ""
+
+      - name: s_address
+        data_type: varchar
+        description: ""
+
+      - name: s_nationkey
+        data_type: number
+        description: ""
+
+      - name: s_phone
+        data_type: varchar
+        description: ""
+
+      - name: s_acctbal
+        data_type: number
+        description: ""
+
+      - name: s_comment
+        data_type: varchar
+        description: ""
