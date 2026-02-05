@@ -1,0 +1,39 @@
+models:
+  - name: orders
+    description: ""
+    columns:
+      - name: o_orderkey
+        data_type: number
+        description: ""
+
+      - name: o_custkey
+        data_type: number
+        description: ""
+
+      - name: o_orderstatus
+        data_type: varchar
+        description: ""
+
+      - name: o_totalprice
+        data_type: number
+        description: ""
+
+      - name: o_orderdate
+        data_type: date
+        description: ""
+
+      - name: o_orderpriority
+        data_type: varchar
+        description: ""
+
+      - name: o_clerk
+        data_type: varchar
+        description: ""
+
+      - name: o_shippriority
+        data_type: number
+        description: ""
+
+      - name: o_comment
+        data_type: varchar
+        description: ""

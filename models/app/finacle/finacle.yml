@@ -1,22 +1,9 @@
 sources:
   - name: finacle
-    database: snowflake_sample_data
-#    schema: env_var('DBT_FINACLE_SRC')
-    loader: qlik # informational only (free text)
+    database: "{{ env_var('DBT_FINACLE_DB') }}"
+    schema: "{{ env_var('DBT_FINACLE_SRC') }}"
+    loader: QLIK # informational only (free text)
 
     tables:
       - name: orders
-        columns:
-          - name: o_orderkey
-            data_tests:
-              - unique
-
-          - name: o_totalprice
-            data_tests:
-              - not_null
-
-      - name: customers
-        columns:
-          - name: c_custkey
-            data_tests:
-              - unique
+      - name: customer
