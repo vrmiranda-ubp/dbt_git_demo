@@ -41,5 +41,4 @@ models:
     app:
       finacle:
         +materialized: view    
-    example:
-      +materialized: table
+
