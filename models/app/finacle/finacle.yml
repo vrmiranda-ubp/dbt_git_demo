@@ -1,0 +1,9 @@
+sources:
+  - name: finacle
+    database: "{{ env_var('DBT_FINACLE_DB') }}"
+    schema: "{{ env_var('DBT_FINACLE_SRC') }}"
+    loader: QLIK # informational only (free text)
+
+    tables:
+      - name: orders
+      - name: customer
