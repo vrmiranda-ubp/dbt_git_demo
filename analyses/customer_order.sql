@@ -11,7 +11,7 @@ cust as (
         c_acctbal,
         c_mktsegment,
         c_comment
-    from {{ ref("customer") }}
+    from {{ source('finacle', 'customer') }}
 
 ),
 ord as (
@@ -24,7 +24,7 @@ ord as (
             , O_CLERK
             , O_SHIPPRIORITY
             , O_COMMENT
-        from source
+        from  {{ source('finacle', 'orders') }}
 )
 , 
 final as (
