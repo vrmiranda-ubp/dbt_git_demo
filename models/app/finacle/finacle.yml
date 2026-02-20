@@ -9,3 +9,4 @@ sources:
       - name: customer
       - name: lineitem
       - name: supplier      
+      - name: partsupp
