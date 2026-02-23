@@ -6,7 +6,7 @@ source as (
 
 ),
 
-renamed as (
+final as (
 
     select
         n_nationkey,
