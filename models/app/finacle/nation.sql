@@ -18,4 +18,4 @@ renamed as (
 
 )
 
-select * from final
+select * from renamed
