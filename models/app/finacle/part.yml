@@ -1,0 +1,39 @@
+models:
+  - name: part
+    description: ""
+    columns:
+      - name: p_partkey
+        data_type: number
+        description: ""
+
+      - name: p_name
+        data_type: varchar
+        description: ""
+
+      - name: p_mfgr
+        data_type: varchar
+        description: ""
+
+      - name: p_brand
+        data_type: varchar
+        description: ""
+
+      - name: p_type
+        data_type: varchar
+        description: ""
+
+      - name: p_size
+        data_type: number
+        description: ""
+
+      - name: p_container
+        data_type: varchar
+        description: ""
+
+      - name: p_retailprice
+        data_type: number
+        description: ""
+
+      - name: p_comment
+        data_type: varchar
+        description: ""
