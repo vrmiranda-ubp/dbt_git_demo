@@ -45,5 +45,9 @@ models:
         +persist_docs:
           relation: true
           columns: true
+  dbt_artifacts:
+    sources:
+      +database: your_db
+      +schema: your_schema          
 on-run-end:
   - "{{ dbt_artifacts.upload_results(results) }}"
