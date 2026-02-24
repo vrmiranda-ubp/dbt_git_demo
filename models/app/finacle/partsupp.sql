@@ -19,8 +19,7 @@ renamed as (
         ps_partkey,
         ps_suppkey,
         ps_availqty,
-        ps_supplycost,
-        ps_comment
+        ps_supplycost
 
     from source
 
