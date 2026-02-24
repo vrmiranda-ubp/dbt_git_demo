@@ -1,3 +1,10 @@
+{{ config
+    (
+        materialized='table'
+        , snowflake_warehouse=env_var("DBT_WH_T1")
+    ) 
+}}
+
 with 
 
 source as (
@@ -6,7 +13,7 @@ source as (
 
 ),
 
-renamed as (
+final as (
 
     select
         n_nationkey,
@@ -18,4 +25,4 @@ renamed as (
 
 )
 
-select * from renamed
+select * from final

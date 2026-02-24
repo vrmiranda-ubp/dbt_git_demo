@@ -1,0 +1,23 @@
+models:
+  - name: partsupp
+    description: ""
+    columns:
+      - name: ps_partkey
+        data_type: number
+        description: ""
+
+      - name: ps_suppkey
+        data_type: number
+        description: ""
+
+      - name: ps_availqty
+        data_type: number
+        description: ""
+
+      - name: ps_supplycost
+        data_type: number
+        description: ""
+
+      - name: ps_comment
+        data_type: varchar
+        description: ""

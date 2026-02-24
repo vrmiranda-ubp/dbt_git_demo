@@ -1,3 +1,10 @@
+{{ config
+    (
+        materialized='table'
+        , snowflake_warehouse=env_var("DBT_WH_T1")
+    ) 
+}}
+
 with 
 
 source as (
@@ -12,8 +19,7 @@ renamed as (
         ps_partkey,
         ps_suppkey,
         ps_availqty,
-        ps_supplycost,
-        ps_comment
+        ps_supplycost
 
     from source
 

@@ -1,7 +1,8 @@
 {{ config
-    (materialized='table'
+    (materialized='incremental'
         , snowflake_warehouse=env_var("DBT_WH_T1")
-    ) 
+        , unique_key = 'o_orderkey'
+        , incremental_strategy = 'merge') 
 }}
 
 with
