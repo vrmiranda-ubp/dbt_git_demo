@@ -12,3 +12,5 @@ sources:
       - name: part    
       - name: partsupp
       - name: nation
+      - name: region
+      
