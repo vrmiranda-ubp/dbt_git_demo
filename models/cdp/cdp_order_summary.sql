@@ -1,0 +1,22 @@
+
+{{ config
+    (materialized='table'
+        , snowflake_warehouse=env_var("DBT_WH_T1"))
+}}
+
+with
+source as (
+
+select * from {{ ref ('stg_finacle_orders') }}
+
+),
+
+final as (
+
+    select o_clerk, sum(O_TOTALPRICE) 
+    from source
+    group by o_clerk
+
+)
+
+select * from final
