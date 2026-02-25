@@ -13,9 +13,9 @@ select * from {{ ref ('stg_finacle_orders') }}
 
 final as (
 
-    select o_clerk, sum(O_TOTALPRICE) 
+    select o_custkey, sum(O_TOTALPRICE) 
     from source
-    group by o_clerk
+    group by o_custkey
 
 )
 
