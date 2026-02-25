@@ -1,5 +1,6 @@
+
 {{ config
-    (materialized='table'
+    (materialized='ephemeral'
         , snowflake_warehouse=env_var("DBT_WH_T1"))
 }}
 
