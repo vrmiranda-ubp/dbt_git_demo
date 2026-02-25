@@ -1,4 +1,3 @@
-
 {{ config
     (materialized='table'
         , snowflake_warehouse=env_var("DBT_WH_T1"))
@@ -13,9 +12,9 @@ select * from {{ ref ('stg_finacle_orders') }}
 
 final as (
 
-    select o_custkey, sum(O_TOTALPRICE) 
+    select o_custkey, o_orderstatus, sum(O_TOTALPRICE) 
     from source
-    group by o_custkey
+    group by o_custkey, o_orderstatus
 
 )
 
