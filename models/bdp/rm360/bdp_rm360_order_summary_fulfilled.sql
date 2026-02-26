@@ -6,15 +6,15 @@
 with
 source as (
 
-select * from {{ ref ('stg_finacle_orders') }}
+select * from {{ ref ('cdp_order_summary') }}
 
 ),
 
 final as (
 
-    select o_custkey, o_orderstatus, sum(O_TOTALPRICE) as o_totalprice
+    select *
     from source
-    group by o_custkey, o_orderstatus
+    where o_orderstatus = 'F'
 
 )
 
