@@ -13,7 +13,7 @@ select * from {{ ref ('stg_finacle_orders') }}
 
 final as (
 
-    select o_custkey, o_orderstatus, sum(O_TOTALPRICE) as o_totalprice
+    select o_custkey, o_orderstatus, sum(O_TOTALPRICE) as o_totalprice, count(*) as ordercount
     from source
     group by o_custkey, o_orderstatus
 
