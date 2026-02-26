@@ -12,7 +12,7 @@ select * from {{ ref ('cdp_order_summary') }}
 
 final as (
 
-    select *
+    select o_custkey, o_orderstatus, o_totalprice
     from source
     where o_orderstatus = 'F'
 
