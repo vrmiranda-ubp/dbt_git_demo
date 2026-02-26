@@ -1,0 +1,8 @@
+sources:
+  - name: finacle
+    database: "{{ env_var('DBT_RM360_DB') }}"
+    schema: "{{ env_var('DBT_RM360_SCHEMA') }}"
+    loader: QLIK # informational only (free text)
+
+    tables:
+      - name: bdp_rm360_order_summary_fulfilled
