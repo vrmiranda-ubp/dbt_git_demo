@@ -1,0 +1,8 @@
+sources:
+  - name: finacle
+    database: "{{ env_var('DBT_CDP_DB') }}"
+    schema: "{{ env_var('DBT_CDP_SCHEMA') }}"
+    loader: QLIK # informational only (free text)
+
+    tables:
+      - name: cdp_order_summary    
