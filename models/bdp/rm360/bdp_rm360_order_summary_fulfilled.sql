@@ -7,7 +7,7 @@
 with
 source as (
 
-select * from {{ ref ('cdp','cdp_order_summary') }}
+select * from {{ ref ('cdp_order_summary') }}
 
 ),
 
