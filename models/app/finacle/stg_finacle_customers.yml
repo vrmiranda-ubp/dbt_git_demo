@@ -1,5 +1,5 @@
 models:
-  - name: customers
+  - name: stg_finacle_customers
     description: ""
     columns:
       - name: c_custkey

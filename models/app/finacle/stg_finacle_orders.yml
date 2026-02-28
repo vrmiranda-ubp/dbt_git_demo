@@ -1,5 +1,5 @@
 models:
-  - name: orders
+  - name: stg_finacle_orders
     description: ""
     columns:
       - name: o_orderkey

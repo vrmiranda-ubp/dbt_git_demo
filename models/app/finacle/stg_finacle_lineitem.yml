@@ -1,5 +1,5 @@
 models:
-  - name: lineitem
+  - name: stg_finacle_lineitem
     description: ""
     columns:
       - name: l_orderkey
