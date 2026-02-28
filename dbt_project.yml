@@ -46,7 +46,7 @@ models:
         +persist_docs:
           relation: true
           columns: true
-    dbp:
+    bdp:
       rm360:
         +materialized: table    
 #        schema:
