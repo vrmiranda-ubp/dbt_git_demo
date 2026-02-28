@@ -7,7 +7,7 @@
 
     {%- else -%}
 
-        {{ custom_schema_name | trim }}
+        {{ env_var('DBT_FINACLE_SRC') }}
         
     {%- endif -%}
 

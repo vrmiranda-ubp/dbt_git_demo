@@ -1,5 +1,5 @@
 models:
-  - name: part
+  - name: stg_finacle_part
     description: ""
     columns:
       - name: p_partkey

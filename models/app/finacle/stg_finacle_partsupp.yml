@@ -1,5 +1,5 @@
 models:
-  - name: partsupp
+  - name: stg_finacle_partsupp
     description: ""
     columns:
       - name: ps_partkey
