@@ -7,7 +7,7 @@
 
     {%- else -%}
 
-        {{ env_var('DBT_FINACLE_SRC') }}
+        {{ env_var('DBT_RM360_SCHEMA') }}
         
     {%- endif -%}
 
