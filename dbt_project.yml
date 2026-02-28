@@ -41,10 +41,18 @@ models:
     # Applies to all files under models/example/
     app:
       finacle:
-        +materialized: view    
+        +materialized: table    
+#         +materialized: view    
         +persist_docs:
           relation: true
           columns: true
+    dbp:
+      rm360:
+        +materialized: table    
+#        schema:
+    cdp:
+      +materialized: table    
+#      schema:    
   dbt_artifacts:
     sources:
       +database: SNOWFLAKE_LEARNING_DB
