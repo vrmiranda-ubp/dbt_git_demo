@@ -1,16 +1,16 @@
 sources:
   - name: finacle
     database: "{{ env_var('DBT_FINACLE_DB') }}"
-    schema: "{{ env_var('DBT_FINACLE_SRC') }}"
+    schema: "{{ env_var('DBT_FINACLE_TGT') }}"    
     loader: QLIK # informational only (free text)
 
     tables:
-      - name: orders
-      - name: customer
-      - name: lineitem
-      - name: supplier   
-      - name: part    
-      - name: partsupp
-      - name: nation
-      - name: region
+      - name: stg_finacle_orders
+      - name: stg_finacle_customer
+      - name: stg_finacle_lineitem
+      - name: stg_finacle_supplier   
+      - name: stg_finacle_part    
+      - name: stg_finacle_partsupp
+      - name: stg_finacle_nation
+      - name: stg_finacle_region
       
