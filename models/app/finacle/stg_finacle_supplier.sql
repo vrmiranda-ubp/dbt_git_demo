@@ -1,5 +1,5 @@
 {{ config
-    (materialized='table'
+    (materialized='view'
         , snowflake_warehouse=env_var("DBT_WH_T1"))
 }}
 

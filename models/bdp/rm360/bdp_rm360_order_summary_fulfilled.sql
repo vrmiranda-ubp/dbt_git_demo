@@ -1,6 +1,7 @@
 {{ config
     (materialized='table'
-        , snowflake_warehouse=env_var("DBT_WH_T1"))
+        , snowflake_warehouse=env_var("DBT_WH_T1")
+        , schema=env_var("DBT_RM360_SCHEMA"))        
 }}
 
 with
