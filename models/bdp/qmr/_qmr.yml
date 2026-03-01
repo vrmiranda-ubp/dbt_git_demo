@@ -1,0 +1,8 @@
+sources:
+  - name: qmr
+    database: "{{ env_var('DBT_QMR_DB') }}"
+    schema: "{{ env_var('DBT_QMR_SCHEMA') }}"
+    loader: QLIK # informational only (free text)
+
+    tables:
+      - name: bdp_qmr_order_summary_open

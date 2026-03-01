@@ -3,12 +3,16 @@
     {%- set default_schema = target.schema -%}
     {%- if target.name == 'dev' -%}
 
-        {{ default_schema }}_{{ custom_schema_name | trim }}
+        {%- if custom_schema_name is none -%}
+            {{ default_schema }}
+        {%- else -%}
+            {{ default_schema }}_{{ custom_schema_name | trim }}
+        {%- endif -%}
 
     {%- else -%}
 
-        {{ env_var('DBT_RM360_SCHEMA') }}
-        
-    {%- endif -%}
+        {{ custom_schema_name | trim }}
 
-{%- endmacro -%}
+    {%- endif -%}
+    
+{%- endmacro %}

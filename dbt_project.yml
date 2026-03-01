@@ -41,6 +41,7 @@ models:
     # Applies to all files under models/example/
     app:
       finacle:
+        +schema: "{{ env_var('DBT_FINACLE_SRC') }}"
         +materialized: table    
 #         +materialized: view    
         +persist_docs:
@@ -54,8 +55,10 @@ models:
       +materialized: table    
 #      schema:    
   dbt_artifacts:
+    +enabled: false
     sources:
       +database: SNOWFLAKE_LEARNING_DB
-      +schema: DBT_ARTIFACTS          
+      +schema: DBT_ARTIFACTS
+      +enabled: true          
 on-run-end:
   - "{{ dbt_artifacts.upload_results(results) }}"
