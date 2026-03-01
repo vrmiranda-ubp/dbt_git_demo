@@ -3,7 +3,7 @@
     (
         materialized='view'
         , snowflake_warehouse=env_var("DBT_WH_T1")
-        , snowflake_warehouse=env_var("DBT_FINACLE_TGT")        
+        , schema=env_var("DBT_FINACLE_TGT")        
     )
 }}
 
