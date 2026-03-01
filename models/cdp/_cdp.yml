@@ -1,5 +1,5 @@
 sources:
-  - name: finacle
+  - name: cdp
     database: "{{ env_var('DBT_CDP_DB') }}"
     schema: "{{ env_var('DBT_CDP_SCHEMA') }}"
     loader: QLIK # informational only (free text)
