@@ -1,7 +1,6 @@
 sources:
   - name: rm360
     database: "{{ env_var('DBT_RM360_DB') }}"
-    schema: "{{ env_var('DBT_RM360_SCHEMA') }}"
     loader: QLIK # informational only (free text)
 
     tables:
