@@ -1,3 +1,9 @@
+{{ config
+    (materialized='view'
+        , snowflake_warehouse=env_var("DBT_WH_T1")
+        , schema=env_var("DBT_RM360_SCHEMA"))        
+}}
+
 with 
 
 source as (
