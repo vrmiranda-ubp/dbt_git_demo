@@ -13,12 +13,12 @@ select * from {{ ref ('cdp_order_summary') }}
 
 calendar as (
 
-select * from {{ ref ('dbp_rm360_calendar_table') }}
+select * from {{ ref ('bdp_rm360_calendar_table') }}
 
 ),
 final as (
 
-    select o_custkey, o_orderstatus, o_totalprice
+    select 
     from source
     join calendar
     on o_orderdate = business_date
