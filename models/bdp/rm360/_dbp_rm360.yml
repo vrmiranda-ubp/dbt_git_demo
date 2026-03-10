@@ -6,4 +6,4 @@ sources:
 
     tables:
       - name: bdp_rm360_order_summary_fulfilled
-      - name: rm360_calendar_table
+      - name: bdp_rm360_calendar_table
