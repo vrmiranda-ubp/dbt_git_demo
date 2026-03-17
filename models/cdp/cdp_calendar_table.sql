@@ -2,7 +2,8 @@
     (materialized='incremental'
         , snowflake_warehouse=env_var("DBT_WH_T1")
         , database=env_var("DBT_CDP_DB")
-        , schema=env_var("DBT_CDP_SCHEMA"))        
+        , schema=env_var("DBT_CDP_SCHEMA")
+    )        
 }}
 
 with 

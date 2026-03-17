@@ -59,6 +59,12 @@ models:
     sources:
       +database: SNOWFLAKE_LEARNING_DB
       +schema: DBT_ARTIFACTS
-      +enabled: true          
+      +enabled: true
+vars:      
+  snowflake_account_usage_database: "SNOWFLAKE_LEARNING_DB"
+  snowflake_account_usage_schema: "custom_account_usage"
+  snowflake_organization_usage_database: "SNOWFLAKE_LEARNING_DB"
+  snowflake_organization_usage_schema: "custom_organization_usage"
+                  
 on-run-end:
   - "{{ dbt_artifacts.upload_results(results) }}"

@@ -2,4 +2,6 @@ packages:
   - package: dbt-labs/codegen
     version: 0.14.0 # Use the latest version available on the dbt Package Hub
   - package: brooklyn-data/dbt_artifacts
-    version: 2.10.0    
+    version: 2.10.0
+  - package: get-select/dbt_snowflake_monitoring
+    version: 5.5.1        
